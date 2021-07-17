@@ -31,11 +31,18 @@ FC.fetchCountries(countryName).then(countryName => {
         } else if (countryName.length > 10) {
             Notiflix.Notify.info('Too many matches found. Please enter a more specific name.');
     } else if (countryName.length === 1) {
-        markupOfSingleCountry(countryName);
+        getMarkupOfOneCountry(countryName);
     } else if (countryName.length > 1 && countryName.length <= 10) {
-        markupOfFewCountries(countryName);
+        getMarkupConries(countryName);
     }
 });
+}
+
+function getMarkupConries(countries) {
+    countryListRef.insertAdjacentHTML('beforeend', markupOfFewCountries(countries));
+}
+function getMarkupOfOneCountry(countries) {
+    countryListRef.insertAdjacentHTML('beforeend', markupOfSingleCountry(countries))
 }
 
 function clearPage() {
