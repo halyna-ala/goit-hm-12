@@ -1,9 +1,11 @@
 import './css/styles.css';
-import { fetchCountries } from './js/fetchCountries';
-var debounce = require('lodash.debounce');
+import './js/fetchCountries';
+import './js/inputCoutry';
+// import { fetchCountries } from './js/fetchCountries';
+// var debounce = require('lodash.debounce');
 
-const DEBOUNCE_DELAY = 300;
+// const DEBOUNCE_DELAY = 300;
 
-const input = document.querySelector('.input')
+// const input = document.querySelector('.input')
 
-input.addEventListener('input', debounce(fetchCountries, DEBOUNCE_DELAY));
+// inputRef.addEventListener('input', debounce(onInputCountry,DEBOUNCE_DELAY));
